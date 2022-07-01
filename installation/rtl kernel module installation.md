@@ -67,3 +67,6 @@ dkms status -m 8812au
 
 I think it's success:D
 kernel module for realtek NIC is installed:>
+
+source:
+`https://github.com/aircrack-ng/rtl8812au`
