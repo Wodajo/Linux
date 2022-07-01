@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "dotfiles/index.md",
+            "file": "installation/rtl kernel module installation.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dotfiles/index.md",
+                "file": "installation/rtl kernel module installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "7e71e5d32c199946",
   "lastOpenFiles": [
+    "installation/rtl kernel module installation.md",
     "dotfiles/index.md",
     "dotfiles/zshenv.md",
     "dotfiles/zshrc.md",
@@ -97,7 +98,6 @@
     "installation/basic workspace conf..md",
     "installation/basic installation.md",
     "installation/basic programs.md",
-    "installation/Qtile.md",
-    "promising-apps.md"
+    "installation/Qtile.md"
   ]
 }
