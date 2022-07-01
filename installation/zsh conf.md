@@ -1,7 +1,3 @@
-`chsh -s $(which zsh)` 
-
-
-
 
 `interactive` - `sdin` and `sdout` connected to`terminal emulator`
 `non-interactive` - doesn't accept user input. e.g. command launched from script
@@ -52,7 +48,18 @@ if we append `/usr/local/bin` at the begginig of the array the old one is remove
 /usr/local/bin /home/egdoc/.local/bin /home/egdoc/bin
 ```
 
+`chsh -s $(which zsh)` 
+`.zshenv` must be in `$HOME`. Export ENVs:
+```
+export XDG_CONFIG_HOME="$HOME/.config"`
+export XDG_DATA_HOME=""$XDG_CONFIG_HOME/.local/share
+export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+```
+Create according directories. Populate `$ZDOTDIR/.zshrc` with history variables, sources to tab completion, sytax highlighting, autosuggestions and prompt.
 
+
+[dotfiles](../dotfiles/index.md)
 [one of the main sources](https://thevaluable.dev/zsh-install-configure-mouseless/)
 [prompt creation instructions](https://voracious.dev/blog/a-guide-to-customizing-the-zsh-shell-prompt)
 [prompt creation v.2](https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/)
