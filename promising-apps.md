@@ -1,3 +1,9 @@
 flameshot - for print skrining
-linux-zen - zen kernel
 alacritty
+vim
+anki
+
+hipervisor stack
+iptables
+
+linux-zen - zen kernel
