@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "installation/rtl kernel module installation.md",
+            "file": "installation/rtl NIC setting up.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 152
+    "width": 100,
+    "collapsed": true
   },
   "right": {
     "id": "4294a05feeee52a2",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/rtl kernel module installation.md",
+                "file": "installation/rtl NIC setting up.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +90,15 @@
   },
   "active": "7e71e5d32c199946",
   "lastOpenFiles": [
+    "installation/rtl NIC setting up.md",
+    "installation/basic programs.md",
     "installation/rtl kernel module installation.md",
+    "README.md",
     "dotfiles/index.md",
     "dotfiles/zshenv.md",
     "dotfiles/zshrc.md",
     "installation/zsh conf.md",
     "to do.md",
-    "installation/basic workspace conf..md",
-    "installation/basic installation.md",
-    "installation/basic programs.md",
-    "installation/Qtile.md"
+    "installation/basic workspace conf..md"
   ]
 }

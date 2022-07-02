@@ -13,6 +13,7 @@ protonvpn-cli
 wireshark-qt
 nmap
 arp-scan
+iw
 obsidian
 atril
 vlc
