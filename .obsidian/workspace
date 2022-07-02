@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 100,
-    "collapsed": true
+    "width": 192
   },
   "right": {
     "id": "4294a05feeee52a2",
@@ -91,14 +90,14 @@
   "active": "7e71e5d32c199946",
   "lastOpenFiles": [
     "installation/rtl NIC setting up.md",
-    "installation/basic programs.md",
     "installation/rtl kernel module installation.md",
+    "installation/Qtile.md",
+    "installation/zsh conf.md",
+    "installation/basic programs.md",
     "README.md",
     "dotfiles/index.md",
     "dotfiles/zshenv.md",
     "dotfiles/zshrc.md",
-    "installation/zsh conf.md",
-    "to do.md",
-    "installation/basic workspace conf..md"
+    "to do.md"
   ]
 }
