@@ -63,3 +63,4 @@ Create according directories. Populate `$ZDOTDIR/.zshrc` with history variables,
 [one of the main sources](https://thevaluable.dev/zsh-install-configure-mouseless/)
 [prompt creation instructions](https://voracious.dev/blog/a-guide-to-customizing-the-zsh-shell-prompt)
 [prompt creation v.2](https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/)
+[zsh promp documentation](https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html)

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "installation/rtl NIC setting up.md",
+            "file": "installation/zsh conf.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/rtl NIC setting up.md",
+                "file": "installation/zsh conf.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,10 +89,10 @@
   },
   "active": "7e71e5d32c199946",
   "lastOpenFiles": [
+    "installation/zsh conf.md",
     "installation/rtl NIC setting up.md",
     "installation/rtl kernel module installation.md",
     "installation/Qtile.md",
-    "installation/zsh conf.md",
     "installation/basic programs.md",
     "README.md",
     "dotfiles/index.md",
