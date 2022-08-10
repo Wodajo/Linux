@@ -1,6 +1,7 @@
 Later paste `pacman -Qm` (sourceless) and `pacman -Qe`
 
 nano
+nvim
 sudo
 grub
 efibootmgr
