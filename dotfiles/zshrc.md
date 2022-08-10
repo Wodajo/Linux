@@ -1,3 +1,5 @@
+if on debian-base system - use modified kali linux .zshrc
+
 ```
 HISTFILE="$ZDOTDIR/.zhistory"
 HISTSIZE=1000

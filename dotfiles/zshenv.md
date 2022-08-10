@@ -1,4 +1,3 @@
-```
 # Place for ENV of all zsh sessions
 
 # XDG Base Directory specification defines where certain files are located
@@ -12,8 +11,7 @@ export XDG_DATA_HOME="$XDG_CONFIG_HOME/.local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 
 # default text editor
-export EDITOR="nano"
+export EDITOR="nvim"
 
 # zsh ENVs
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-```
