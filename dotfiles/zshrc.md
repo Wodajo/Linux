@@ -1,4 +1,4 @@
-if on debian-base system - use modified kali linux .zshrc
+minimal version. Modified kali zshrc works just fine on arch:D
 
 ```
 HISTFILE="$ZDOTDIR/.zhistory"

@@ -1,11 +1,13 @@
 
-from libqtile import bar, layout, widget
+#from libqtile import qtile
+from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
+import os  # for autostart hook
+import subprocess  # for autostart hook
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "alacritty"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -28,7 +30,8 @@ keys = [
     Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+#    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    Key([mod], "n", lazy.window.toggle_floating(), desc="Reset all window sizes"),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -46,8 +49,11 @@ keys = [
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    #Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+#    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "r", lazy.spawn('dmenu_run'), desc="Dmenu luncher"),
+    Key([mod], "f", lazy.spawn('thunar'), desc="Thunar luncher"),
+#    Key([mod], "m", lazy.spawn('alacritty alsamixer'), desc="alsamixer (mainly for mic control"),
+    Key([], "Print", lazy.spawn('flameshot gui'), desc="For screenshots"),
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -q set Master 5%-")),
@@ -126,6 +132,13 @@ def init_colors():
 
 colors = init_colors()
 
+# Functions (I have no idea why alsamixer spawning don't work:<)
+#def open_alsamixer(qtile):  # spawn alsamixer widget
+#	qtile.cmd_spawn('alsamixer')
+#
+#def close_calendar(qtile):  # kill calendar widget
+#    qtile.cmd_spawn('killall -q gsimplecal')
+
 screens = [
     Screen(
         top=bar.Bar(
@@ -141,11 +154,20 @@ screens = [
                         format='   {load_percent}%  ',
                         update_interval=1,
                 ),
+#		widget.CPUGraph(
+#			type='line',
+#			line_width=1,
+#			border_width=1,
+#			border_color="#000000",
+#			frequency=2,
+#			samples=50,
+#		),
                 widget.Memory(
                         foreground=colors[4],
                         padding=0,
                         format='   {MemUsed: .1f}{mm}/{MemTotal: .1f}{mm}  ',
                         measure_mem='G',
+#                        mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn(terminal + ' -e htop')},
                 ),
 		widget.Net(
                         foreground=colors[10],
@@ -162,13 +184,23 @@ screens = [
                 widget.Clock(
 			format=" %d/%m/%y %H:%M ",
 		),
-		widget.Moc(),
+#		widget.Moc(),
+#		widget.Mpris2(
+#			foreground=colors[7],
+#		),
+		widget.Bluetooth(),
                 widget.Volume(
                         foreground=colors[8],
                         padding=0,
                         fmt='  墳 {}  ',
                         scroll=True,
+                        mouse_callbacks = {'Button3': lazy.spawn("pavucontrol")},
                 ),
+#                widget.TextBox(
+#			text = '*',
+#			mouse_callbacks = {'Button1': open_alsamixer},  # don't work (I tried to bind with with a function)
+#			mouse_callbacks = {'Button1': lazy.spawn("amixer -q set Capture toggle"), 'Button4': lazy.spawn("amixer -q set Capture 1%+"), 'Button5': lazy.spawn("amixer -q set Capture 1%-")},
+#                ),
             ],
             24, background="#00000000", border_width=3, border_color="#00000000"
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
@@ -199,6 +231,9 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
+    	Match(wm_class='galculator'),  # Galculator
+#        Match(wm_class='pavucontrol')  # Mic and audio controller
+        Match(wm_class='blueman-manager'),
     ]
 )
 auto_fullscreen = True
@@ -221,3 +256,13 @@ wl_input_rules = None
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+@hook.subscribe.startup
+def autostart():
+    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.call([home])
+
+#@hook.subscribe.startup_once
+#def autostart():
+#    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+#    subprocess.Popen([home])

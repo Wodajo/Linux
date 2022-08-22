@@ -1,3 +1,4 @@
+```
 # Place for ENV of all zsh sessions
 
 # XDG Base Directory specification defines where certain files are located
@@ -15,3 +16,4 @@ export EDITOR="nvim"
 
 # zsh ENVs
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+```

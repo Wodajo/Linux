@@ -1,9 +1,4 @@
-flameshot - for print skrining
-alacritty
-vim
-anki
+anki for linux
 
 hipervisor stack
 iptables
-
-linux-zen - zen kernel
