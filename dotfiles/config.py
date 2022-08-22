@@ -91,7 +91,7 @@ for i in groups:
 
 layouts = [
     layout.Max(),
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=3),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -144,7 +144,13 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-		highlight_method='line'
+                    highlight_method='text',  # uses *_border color settings
+                    this_current_screen_border='#1cb909',  # when focused
+                    #this_screen_border='',  # when unfocused
+                    #other_current_screen_border='',  # on other screen, when focused
+                    #other_screen_border='',  # on other screen, when unfocused
+                    urgent_border='#ff0000',  # urgent alert on that window
+                    #highlight_method='line',  # alternative windows highlighting
 		),
                 widget.Prompt(),
 		widget.WindowName(),
@@ -202,7 +208,9 @@ screens = [
 #			mouse_callbacks = {'Button1': lazy.spawn("amixer -q set Capture toggle"), 'Button4': lazy.spawn("amixer -q set Capture 1%+"), 'Button5': lazy.spawn("amixer -q set Capture 1%-")},
 #                ),
             ],
-            24, background="#00000000", border_width=3, border_color="#00000000"
+            24,
+            background='#000000.3', opacity=1
+         #  background='#000000',  #before opacity & without bar borders
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
