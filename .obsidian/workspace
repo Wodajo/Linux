@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "installation/Qtile.md",
+            "file": "usefull.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 311.5
+    "width": 146.5
   },
   "right": {
     "id": "4294a05feeee52a2",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/Qtile.md",
+                "file": "usefull.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "7e71e5d32c199946",
   "lastOpenFiles": [
+    "promising-apps.md",
+    "installation/Qtile.md",
     "installation/basic programs.md",
     "installation/basic installation.md",
     "dotfiles/zshrc.md",
     "dotfiles/index.md",
     "dotfiles/zshenv.md",
-    "promising-apps.md",
     "usefull.md",
     "README.md",
-    "installation/basic workspace conf..md",
-    "installation/rtl NIC setting up.md"
+    "installation/basic workspace conf..md"
   ]
 }
