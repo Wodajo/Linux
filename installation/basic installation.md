@@ -51,7 +51,7 @@ Root has a name Linux root (x86-64)
 ##### format partitions with appropriate fs
 EFI partition must contain FAT32
 
-` lsblk -f` to check if sth is mounted. If it is -> UNmount e.g. `unmount /dev/sda2`
+` lsblk -f` to check if sth is mounted. If it is -> UNmount e.g. `umount /dev/sda2`
 
 `mkfs.ext4 /dev/sda3` to create ext4 fs on sda3 partition
 `mkswap /dev/sda2` to initialize swap partition

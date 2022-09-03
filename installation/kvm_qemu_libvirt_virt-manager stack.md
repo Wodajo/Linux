@@ -110,6 +110,12 @@ in `virt-manager` _File_ > _Add Connection_ -> _QEMU/KVM User session_
 #### bridged network
 [Manual (not done yet)](https://joshrosso.com/docs/2020/2020-11-13-vm-networks/)
 
+
+
+#### virt-manager troubleshooting
+If problems with `xorg` during installation - change `Video` options
+(e.g. from `Virtio` to `QXL` without 3D acceleration for Kali Linux iso)
+
 #### virsh commands
 `virsh list` - running VMs
 `virsh list --all` - all VMs

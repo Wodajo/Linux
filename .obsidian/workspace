@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "installation/kvm_qemu_libvirt_virt-manager stack.md",
+            "file": "installation/basic installation.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/kvm_qemu_libvirt_virt-manager stack.md",
+                "file": "installation/basic installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "7e71e5d32c199946",
   "lastOpenFiles": [
+    "installation/chroot.md",
+    "installation/basic programs.md",
+    "notes.md",
+    "README.md",
+    "general use commands.md",
+    "installation/kvm_qemu_libvirt_virt-manager stack.md",
     "dotfiles/zshrc.md",
     "dotfiles/zshenv.md",
     "dotfiles/index.md",
-    "README.md",
-    "promising-apps.md",
-    "general use commands.md",
-    "installation/kvm_qemu_libvirt_virt-manager stack.md",
-    "installation/Qtile.md",
-    "installation/basic programs.md",
-    "installation/basic installation.md"
+    "installation/Qtile.md"
   ]
 }
