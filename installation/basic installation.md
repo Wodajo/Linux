@@ -21,6 +21,7 @@ Later you can install and enable `NetworkManager` (contains: daemon, cli interfa
 
 
 `iwctl` to get into interactive `iwd` (net wireless daemon)
+	on my device it has some wierd problem with connecting to home router, but doesn't with smartphone hot-spot
 `device list` list wifi devices (e.g. wlan0)
 `station wlan0 scan` no output, but it works
 `station wlan0 get-networks`
