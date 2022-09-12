@@ -1,7 +1,8 @@
 #### compiler
 A `compiler` creates `machine code` that runs on a processor with a specific `Instruction Set Architecture` (`ISA`), which is `processor-dependent`
 
-`Compilers` are also `platform-dependent`. That is, a compiler can convert C++, for example, to machine code that’s targeted at a platform that is running the Linux OS
+`Compilers` are also `platform-dependent`.
+That is, a compiler can convert C++, for example, to machine code that’s targeted at a platform that is running the Linux OS
 
 A `cross-compiler`, however, can generate code for a platform other than the one it runs on itself.
 
@@ -20,7 +21,6 @@ It's effectively a compiler for the assembly language, but can also be used inte
 
 
 
-
 To pipe:
 ```
  celldweller.xspf
@@ -31,6 +31,6 @@ To pipe:
 'yt1s.com -IndustrialElectronic Rock Celldweller End Of An Empire 2015 Full album.mp3'
 'yt1s.com - Scandroid Scandroid Full Album.mp3'
 ```
-into file use:
-`└─$ find . -print0 | xargs -0 file`
+into `file` use:
+`find . -print0 | xargs -0 file`
 

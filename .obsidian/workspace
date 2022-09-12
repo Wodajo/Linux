@@ -6,10 +6,24 @@
       {
         "id": "7e71e5d32c199946",
         "type": "leaf",
+        "dimension": 74.70534904805078,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "installation/basic installation.md",
+            "file": "notes.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "d6eab4b97a8cf4a6",
+        "type": "leaf",
+        "dimension": 25.294650951949226,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "general use commands.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 146.5
+    "width": 203.5
   },
   "right": {
     "id": "4294a05feeee52a2",
@@ -69,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/basic installation.md",
+                "file": "notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +103,15 @@
   },
   "active": "7e71e5d32c199946",
   "lastOpenFiles": [
+    "general use commands.md",
+    "notes.md",
+    "installation/basic installation.md",
     "installation/chroot.md",
     "installation/basic programs.md",
-    "notes.md",
     "README.md",
-    "general use commands.md",
     "installation/kvm_qemu_libvirt_virt-manager stack.md",
     "dotfiles/zshrc.md",
     "dotfiles/zshenv.md",
-    "dotfiles/index.md",
-    "installation/Qtile.md"
+    "dotfiles/index.md"
   ]
 }
