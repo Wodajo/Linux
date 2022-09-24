@@ -52,7 +52,9 @@ keys = [
 #    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "r", lazy.spawn('dmenu_run'), desc="Dmenu luncher"),
     Key([mod], "f", lazy.spawn('thunar'), desc="Thunar luncher"),
-#    Key([mod], "m", lazy.spawn('alacritty alsamixer'), desc="alsamixer (mainly for mic control"),
+    Key([mod], "o", lazy.spawn('obsidian'), desc="Obsidian luncher"),
+    Key([mod], "p", lazy.spawn('okular'), desc="Okular luncher"),
+    #    Key([mod], "m", lazy.spawn('alacritty alsamixer'), desc="alsamixer (mainly for mic control"),
     Key([], "Print", lazy.spawn('flameshot gui'), desc="For screenshots"),
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
@@ -194,7 +196,7 @@ screens = [
 #		widget.Mpris2(
 #			foreground=colors[7],
 #		),
-		widget.Bluetooth(),
+#		widget.Bluetooth(),
                 widget.Volume(
                         foreground=colors[8],
                         padding=0,
@@ -241,7 +243,8 @@ floating_layout = layout.Floating(
         Match(title="pinentry"),  # GPG key password entry
     	Match(wm_class='galculator'),  # Galculator
 #        Match(wm_class='pavucontrol')  # Mic and audio controller
-        Match(wm_class='blueman-manager'),
+        Match(wm_class='blueman-manager'),  # Bluetooth manager
+        Match(wm_class='xfreerdp'),  # RDP window (kinda annoying bcos other keybindings inside)
     ]
 )
 auto_fullscreen = True

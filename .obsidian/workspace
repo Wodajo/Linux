@@ -63,7 +63,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -101,14 +102,14 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7e71e5d32c199946",
+  "active": "332463b16db2775e",
   "lastOpenFiles": [
+    "README.md",
     "general use commands.md",
     "notes.md",
     "installation/basic installation.md",
     "installation/chroot.md",
     "installation/basic programs.md",
-    "README.md",
     "installation/kvm_qemu_libvirt_virt-manager stack.md",
     "dotfiles/zshrc.md",
     "dotfiles/zshenv.md",
