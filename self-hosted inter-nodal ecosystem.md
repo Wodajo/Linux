@@ -1,4 +1,4 @@
-How I'd like my inter-nodal ecosystem to work?
+How I'd like it to work?
 How can I make it work?
 
 #### Nextcloud
@@ -32,3 +32,9 @@ less prone to local errors (like power outage)
 Cons:
 not really self-hosted
 subscriber-like paymentship
+
+- Signal
+- protonVPN (easy and efficient. Deals with DNS and IP address problems)
+- keepassXC (you can store encrypted keys online)
+- [Vera Crypt](https://veracrypt.fr/en/Home.html)
+- 
