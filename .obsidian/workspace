@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes.md",
+            "file": "installation/self-hosted environment.md",
             "mode": "source",
             "source": false
           }
@@ -63,8 +63,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -84,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes.md",
+                "file": "installation/self-hosted environment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,17 +101,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "332463b16db2775e",
+  "active": "7e71e5d32c199946",
   "lastOpenFiles": [
+    "installation/1 - install script prep.md",
+    "notes.md",
+    "installation/kvm_qemu_libvirt_virt-manager stack.md",
     "README.md",
     "general use commands.md",
-    "notes.md",
     "installation/basic installation.md",
     "installation/chroot.md",
     "installation/basic programs.md",
-    "installation/kvm_qemu_libvirt_virt-manager stack.md",
     "dotfiles/zshrc.md",
-    "dotfiles/zshenv.md",
-    "dotfiles/index.md"
+    "dotfiles/zshenv.md"
   ]
 }

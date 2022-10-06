@@ -1,0 +1,34 @@
+How I'd like my inter-nodal ecosystem to work?
+How can I make it work?
+
+#### Nextcloud
+works for Android, Lin, Win, Mac
+-   ~~Mail~~ - I prefere protonmail
+-   Files sync
+-   Calendar
+-   Contacts
+-   Notes
+-   Tasks
+  
+###### Hosted on local server
+access via port forwarding / proxy
+
+Pros:
+truly self-hosted
+probably cheaper in long run
+
+Cons:
+router-stability dependant
+harder to set up
+
+##### Hosted on rented server
+easy access
+
+Pros:
+easy set up
+cheaper in short term
+less prone to local errors (like power outage)
+
+Cons:
+not really self-hosted
+subscriber-like paymentship
