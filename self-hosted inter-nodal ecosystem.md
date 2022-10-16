@@ -76,3 +76,4 @@ pentest:
 	macchanger (root)
 	rubber ducky (root & custom kernel)
 doradcakariery@sdacademy.pl
+https://www.linkedin.com/groups/8790851
