@@ -14,13 +14,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "self-hosted inter-nodal ecosystem.md",
+                "file": "installation/kvm_qemu_libvirt_virt-manager stack.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d158a8c497af8d88",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "installation/friends&fam.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "08e10fecb735ae52",
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "self-hosted inter-nodal ecosystem.md",
+                "file": "installation/friends&fam.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,17 +131,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "7e71e5d32c199946",
+  "active": "d158a8c497af8d88",
   "lastOpenFiles": [
-    "installation/1 - install script prep.md",
-    "notes.md",
     "installation/kvm_qemu_libvirt_virt-manager stack.md",
+    "installation/Qtile.md",
+    "installation/rtl kernel module installation.md",
+    "installation/rtl NIC setting up.md",
+    "installation/rtl on Pop OS.md",
+    "installation/zsh logic.md",
+    "notes.md",
     "README.md",
-    "general use commands.md",
-    "installation/basic installation.md",
-    "installation/chroot.md",
-    "installation/basic programs.md",
-    "dotfiles/zshrc.md",
-    "dotfiles/zshenv.md"
+    "self-hosted inter-nodal ecosystem.md",
+    "installation/basic programs.md"
   ]
 }

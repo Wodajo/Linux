@@ -18,7 +18,7 @@ obsidian
 atril
 vlc
 
-nckrack
+ncrack
 john
 
 [SecList](https://github.com/danielmiessler/SecLists)
