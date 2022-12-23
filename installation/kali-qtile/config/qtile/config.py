@@ -1,5 +1,5 @@
 # Wodajo's Qtile config file - kali edition, enjoy
-# graphic icons from https://fontawesome.com/icons
+# https://www.utf8icons.com/subsets for icons
 
 #from libqtile import qtile
 from libqtile import bar, layout, widget, hook
@@ -161,7 +161,7 @@ screens = [
                 widget.CPU(
                         foreground=colors[12],
                         padding=0,
-                        format='   {load_percent}%  ',
+                        format='  {load_percent}%  ',
                         update_interval=1,
                 ),
 #		widget.CPUGraph(
@@ -175,19 +175,19 @@ screens = [
                 widget.Memory(
                         foreground=colors[4],
                         padding=0,
-                        format='   {MemUsed: .1f}{mm}/{MemTotal: .1f}{mm}  ',
+                        format='  {MemUsed: .1f}{mm}/{MemTotal: .1f}{mm}  ',
                         measure_mem='G',
 #                        mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn(terminal + ' -e htop')},
                 ),
 		widget.Net(
                         foreground=colors[10],
                         padding=0,
-                        format='   {down} {up}  ',
+                        format='  ↓ {down} ↑ {up}  ',
                         prefix='M',
                 ),
                 widget.Battery(
                     foreground=colors[7],
-                    format='   {percent:2.0%}  ',
+                    format='  {percent:2.0%}  ',
                     update_interval=1,
                 ),
                 widget.Systray(),
@@ -202,7 +202,7 @@ screens = [
                 widget.Volume(
                         foreground=colors[8],
                         padding=0,
-                        fmt='  墳 {}  ',
+                        fmt='  🔈 {}  ',
                         scroll=True,
                         mouse_callbacks = {'Button3': lazy.spawn("pavucontrol")},
                 ),
