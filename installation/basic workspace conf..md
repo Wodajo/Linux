@@ -1,3 +1,4 @@
 - protonvpn perm ks + autostart (e.g. via .xprofile, but better with some autostart.sh)
 - git clone github repos and bind them with obsidian
 - [[zsh logic|install and configure zsh]]
+- check if kali XDG logic analogical to mine

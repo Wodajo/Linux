@@ -9,31 +9,18 @@
         "dimension": 74.70534904805078,
         "children": [
           {
-            "id": "7e71e5d32c199946",
+            "id": "75c2682c10b963cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installation/kvm_qemu_libvirt_virt-manager stack.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d158a8c497af8d88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "installation/friends&fam.md",
+                "file": "general use commands.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "08e10fecb735ae52",
@@ -110,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/friends&fam.md",
+                "file": "general use commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,20 +115,26 @@
     "width": 300,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
+    }
   },
-  "active": "d158a8c497af8d88",
+  "active": "75c2682c10b963cf",
   "lastOpenFiles": [
-    "installation/kvm_qemu_libvirt_virt-manager stack.md",
-    "installation/Qtile.md",
-    "installation/rtl kernel module installation.md",
-    "installation/rtl NIC setting up.md",
-    "installation/rtl on Pop OS.md",
-    "installation/zsh logic.md",
+    "self-hosted inter-nodal ecosystem.md",
+    "general use commands.md",
     "notes.md",
     "README.md",
-    "self-hosted inter-nodal ecosystem.md",
-    "installation/basic programs.md"
+    "installation/rtl kernel module installation.md",
+    "installation/Qtile.md",
+    "installation/kvm_qemu_libvirt_virt-manager stack.md",
+    "installation/friends&fam.md",
+    "installation/chroot.md",
+    "installation/basic workspace conf..md"
   ]
 }

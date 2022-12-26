@@ -1,4 +1,4 @@
-Later paste `pacman -Qm` (sourceless) and `pacman -Qe`
+look at `pacman -Qm` (sourceless) and `pacman -Qe` -> prepare packets for installation script
 
 nvim
 sudo

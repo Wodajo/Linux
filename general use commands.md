@@ -1,3 +1,6 @@
+`ss -lntu`
+	`-l` listening sockets, `-n`  show port nr, `-t` TCP, `-u` UDP
+
 ### git
 `git config --global user.name "Username"`
 `git config --global user.email "your@mail.bycz"`
@@ -6,7 +9,8 @@
 `git config --global --unset credential.helper`
 
 ### printing settings
-`system-config-printer`
+`system-config-printer` (gtk gui)
+`127.0.0.1:631` CUPS web interface
 
 ### Mic & speaker
 `alsamixer` - F5 for all devices
