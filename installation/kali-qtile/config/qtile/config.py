@@ -52,10 +52,11 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
 #    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key([mod], "r", lazy.spawn('dmenu_run'), desc="Dmenu luncher"),
+    Key([mod], "r", lazy.spawn('rofi -show drun -theme Monokai.rasi'), desc="Rofi app luncher"),
     Key([mod], "f", lazy.spawn('thunar'), desc="Thunar luncher"),
     Key([mod], "o", lazy.spawn('obsidian'), desc="Obsidian luncher"),
     Key([mod], "p", lazy.spawn('okular'), desc="Okular luncher"),
+    Key([mod], "c", lazy.spawn('betterlockscreen --lock'), desc="Screen lock"),
     #    Key([mod], "m", lazy.spawn('alacritty alsamixer'), desc="alsamixer (mainly for mic control"),
     Key([], "Print", lazy.spawn('flameshot gui'), desc="For screenshots"),
     # Sound

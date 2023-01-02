@@ -12,7 +12,7 @@ export XDG_DATA_HOME="$XDG_CONFIG_HOME/.local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 
 # default text editor
-export EDITOR="nvim"
+export EDITOR="vim"
 
 # zsh ENVs
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"

@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "general use commands.md",
+                "file": "dotfiles/zshenv.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "general use commands.md",
+                "file": "dotfiles/zshenv.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,15 +126,15 @@
   },
   "active": "75c2682c10b963cf",
   "lastOpenFiles": [
-    "self-hosted inter-nodal ecosystem.md",
+    "dotfiles/index.md",
+    "dotfiles/zshrc.md",
+    "dotfiles/zshenv.md",
+    "installation/zsh logic.md",
+    "installation/basic workspace conf..md",
     "general use commands.md",
+    "self-hosted inter-nodal ecosystem.md",
     "notes.md",
     "README.md",
-    "installation/rtl kernel module installation.md",
-    "installation/Qtile.md",
-    "installation/kvm_qemu_libvirt_virt-manager stack.md",
-    "installation/friends&fam.md",
-    "installation/chroot.md",
-    "installation/basic workspace conf..md"
+    "installation/rtl kernel module installation.md"
   ]
 }

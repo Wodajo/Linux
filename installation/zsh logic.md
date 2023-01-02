@@ -6,7 +6,7 @@
 
 system-wide zsh startup files are the following:
 -   `/etc/zshenv` - set ENVs, **always** invoked when zsh session is started
--   `/etc/zprofile` - read when `login shell` session is started (if `interactive` - before`zshrc`)
+-   `/etc/zprofile` - read when `login shell` session is started (if `interactive` - before `zshrc`)
 -   `/etc/zlogin` - read when `login shell` session is started (if `interactive` - after `zshrc`)
 -   `/etc/zshrc` - read when `interactive shell` is started
 -   `/etc/zlogout` - read when `login shell` is closed
