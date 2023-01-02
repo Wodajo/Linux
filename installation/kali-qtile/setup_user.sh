@@ -10,7 +10,10 @@ pip install qtile
 
 
 # Create .zshenv (for XDG env specification of each zsh session)
-whoami
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$XDG_CONFIG_HOME/.local/share"
+export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
+
 cat <<- _EOF_ > ~/.zshenv
 # Place for ENV of all zsh sessions
 
@@ -40,3 +43,16 @@ cp -r config/qtile/* $XDG_CONFIG_HOME/qtile/  # config.py & autostart.sh
 cp -r config/alacritty/* $XDG_CONFIG_HOME/alacritty/  # alacritty.yml
 cp -r config/rofi/* $XDG_CONFIG_HOME/rofi/  # rofi.rasi & Monokai.rasi
 #cp config/picom.conf ~/.config  - you can mess with shadows and stuff later
+
+# Appimages
+if [ ! -d "$HOME/ Downloads" ]; then
+	mkdir -p $HOME/Downloads
+fi
+APP="$HOME/Downloads/Appimages_waiting_for_installation"
+mkdir -p $APP
+wget https://github.com/jgraph/drawio-desktop/releases/download/v20.7.4/drawio-x86_64-20.7.4.AppImage
+mv ./https://github.com/jgraph/drawio-desktop/releases/download/v20.7.4/drawio-x86_64-20.7.4.AppImage $APP
+
+
+# Closing words
+echo "Done. Remember to set up ks and login to protonvpn-cli"
