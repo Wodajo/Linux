@@ -203,7 +203,7 @@ screens = [
                 widget.Volume(
                         foreground=colors[8],
                         padding=0,
-                        fmt='  🔈 {}  ',
+                        fmt='  {}  ',
                         scroll=True,
                         mouse_callbacks = {'Button3': lazy.spawn("pavucontrol")},
                 ),
