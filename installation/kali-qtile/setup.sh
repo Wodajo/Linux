@@ -8,7 +8,7 @@ ALA_CONFIG_DIR="/home/$USERNAME/.config/alacritty"
 ROFI_CONFIG_DIR="/home/$USERNAME/.config/rofi"
 
 echo "Installing dependencies"
-apt install -y xserver-xorg zsh python3 python3-pip python3-xcffib python3-cffi libpangocairo-1.0-0 lxappearance lxpolkit nitrogen thunar picom alacritty lightdm lightdm-gtk-greeter blueman gnome-keyring okular alsa-utils flameshot brightnessctl galculator vim-gtk3 betterlockscreen
+apt install -y xserver-xorg zsh python3 python3-pip python3-xcffib python3-cffi libpangocairo-1.0-0 lxappearance lxpolkit nitrogen thunar picom alacritty lightdm lightdm-gtk-greeter blueman gnome-keyring okular alsa-utils flameshot brightnessctl galculator vim betterlockscreen
 # xserver-xorg - X11 backend
 # xcffib - required for X11 backend (has to be installed before cairocffi)
 # cffi - bars & popups
@@ -34,7 +34,7 @@ Type=Application
 Keywords=wm;tiling
 _EOF_
 
-# Adding cmds to .xprofile (started with Window Manager) - rest is in autostart.sh
+# Adding cmds to .xprofile (started with Window Manager) - rest is in autostart.sh (abandoned idea in later scripts)
 cat <<- _EOF_ >> /home/$USERNAME/.xprofile
 setxkbmap pl
 _EOF_

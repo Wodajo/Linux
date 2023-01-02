@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # Programs starting with Qtile
 
+setxkbmap pl &
 nm-applet &
 nitrogen --restore &
 picom -f &
