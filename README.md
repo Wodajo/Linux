@@ -9,3 +9,12 @@ Plans:
 ~~-> kernel switching and modules (seems like a pretty damn important thing)~~ - kinda done   
 ~~-> KVM/QEMU/libvirt/virt-manager (as a part of hypervisors quelling)~~ - done  
 ~~->  full-disk encryption for btrfs~~ - very slow, maybe bcos lacking TCM
+
+
+Repo files arrangement:
+- dotfiles
+- installation - for system installation scripts and such
+	  (different file systems, kernels, distros etc.)
+- theory - mostly universal & basic stuff
+- tech - for separate technologies/programs
+- cli - for commands dump (low description)

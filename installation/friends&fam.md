@@ -29,3 +29,5 @@ platnosci firma
 
 
 neovim, nmap, burpsuite
+
+`clipgrab` - gui for `yt-dlp`
