@@ -9,7 +9,7 @@
 	- determines how the system should be set up in each `runlevel` aka `boot target`
 	- starts all background process after setting default `runlevel` for the system
 	- automatically adopts all `orphaned processes`
-there was `system-v` than `upstart`. Now `systemd` is the current `init`
+there was `system-v` than `upstart`. Now `systemd` is the `init`
 
 
 `kdump` - write all your memory to hard drive - in case of kernel crash.
