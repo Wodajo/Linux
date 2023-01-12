@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/storage management/partitioning.md",
+                "file": "theory/storage management/2. partitioning.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/storage management/1. storage devices.md",
+                "file": "theory/storage management/3. file system.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3652566c1bd89adb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "theory/storage management/4. mounting partitions.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -114,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/storage management/1. storage devices.md",
+                "file": "theory/storage management/4. mounting partitions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,17 +153,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "cb6e119765cd2ccb",
+  "active": "3652566c1bd89adb",
   "lastOpenFiles": [
-    "theory/storage management/partitioning.md",
-    "theory/storage management/2. file system.md",
+    "theory/storage management/3. file system.md",
+    "theory/storage management/4. mounting partitions.md",
+    "theory/storage management/2. partitioning.md",
     "theory/storage management/1. storage devices.md",
+    "theory/basic info.md",
     "draft.md",
     "theory/chroot.md",
-    "theory/basic info.md",
     "theory/net config/basic conf.md",
     "theory/net config/NIC bonding.md",
-    "theory/boot process/4. init ramdisk and kernel.md",
-    "theory/boot process/3. GRUB and GRUB2.md"
+    "theory/boot process/4. init ramdisk and kernel.md"
   ]
 }
