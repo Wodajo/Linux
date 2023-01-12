@@ -8,84 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ba50aaa7af6f0e67",
+            "id": "c789b5915c8f81ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/kernel management.md",
+                "file": "theory/basic info.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "efc581e3c6b147ec",
+            "id": "a2a1306540006e0b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cli/system info.md",
+                "file": "theory/storage management/partitioning.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f0ce4fe998216dc5",
+            "id": "cb6e119765cd2ccb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/net config/basic.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "25062acfde092034",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/boot process/1. GPT and MBR.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4b6d0243e3395e38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/boot process/2. UEFI and BIOS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "361cac7b4dc626c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/boot process/2. UEFI and BIOS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6dfa83722eb35ff8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/kernel management.md",
+                "file": "theory/storage management/1. storage devices.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -162,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/kernel management.md",
+                "file": "theory/storage management/1. storage devices.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,17 +141,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "6dfa83722eb35ff8",
+  "active": "cb6e119765cd2ccb",
   "lastOpenFiles": [
-    "theory/boot process/4. init ramdisk and kernel.md",
-    "theory/boot process/3. GRUB and GRUB2.md",
-    "theory/boot process/2. UEFI and BIOS.md",
-    "theory/boot process/1. GPT and MBR.md",
-    "theory/basic info.md",
-    "theory/chroot.md",
-    "theory/net config/NIC bonding.md",
-    "theory/net config/basic.md",
+    "theory/storage management/partitioning.md",
+    "theory/storage management/2. file system.md",
+    "theory/storage management/1. storage devices.md",
     "draft.md",
-    "cli/system info.md"
+    "theory/chroot.md",
+    "theory/basic info.md",
+    "theory/net config/basic conf.md",
+    "theory/net config/NIC bonding.md",
+    "theory/boot process/4. init ramdisk and kernel.md",
+    "theory/boot process/3. GRUB and GRUB2.md"
   ]
 }

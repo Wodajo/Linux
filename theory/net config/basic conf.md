@@ -52,6 +52,7 @@ iface eth0 inet static
 
 or `NetworkManager`
 
+
 ### CentOS & RedHat/Fedora
 **`/etc/sysconfig/`** - place for most of the system configuration files:D
 `/etc/sysconfig/network-scripts/ifcfg-eth0` - conf file for eth0 interface
