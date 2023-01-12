@@ -1,3 +1,15 @@
+#### so as to pipe
+```
+ celldweller.xspf
+'Imagine Dragons - Bones (Official Lyric Video).mp3'
+'The Glitch Mob - Drink the Sea (10 Year Anniversary Full Album Visual).mp3'
+'yt1s.com -Celldweller Wish Upon A Blackstar Full Album HD.mp3'
+'yt1s.com - Scandroid Scandroid Full Album.mp3'
+```
+into `file` (program) use:
+`find . -print0 | xargs -0 file`
+
+### open ports
 `ss -lntu`
 	`-l` listening sockets, `-n`  show port nr, `-t` TCP, `-u` UDP
 

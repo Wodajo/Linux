@@ -13,7 +13,13 @@ e.g. `find . -perm -g+w,u+w`
  `hostname`/`groupname` or `UID`/`GID`
 
 - `-cmin n`
-**content or attributes** changed `n` , `-n`, `+n` ago
+**content or attributes** (status) changed `n` , `-n`, `+n` ago
+
+- `-amin n`
+last **accessed**
+
+- `mmin n`
+last **modified**
 
 - `-cnewer FILE`
 match files or dirs which **content or attributes** was modified more recently than `FILE`

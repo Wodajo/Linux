@@ -6,6 +6,7 @@
 
 `tar -rvf ARCHIVE FILES`
 `-r` append to archive
+(CANNOT update compressed archives)
 
 
 `tar -tf ARCHIVE` or `tar -ztf ARCHIVE`

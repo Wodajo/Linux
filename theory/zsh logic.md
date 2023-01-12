@@ -1,5 +1,5 @@
 
-`interactive` - `sdin` and `sdout` connected to`terminal emulator`
+`interactive` - `sdin` and `sdout` connected to `terminal emulator`
 `non-interactive` - doesn't accept user input. e.g. command launched from script
 `login` - used for logging into
 `non-login`

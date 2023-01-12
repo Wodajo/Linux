@@ -11,7 +11,7 @@ Plans:
 ~~->  full-disk encryption for btrfs~~ - very slow, maybe bcos lacking TCM
 
 
-Repo files arrangement:
+Repo arrangement:
 - dotfiles
 - installation - for system installation scripts and such
 	  (different file systems, kernels, distros etc.)

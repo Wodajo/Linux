@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "7de5a8a154f3ce82",
+            "id": "efc581e3c6b147ec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cli/connection/xfreerdp.md",
+                "file": "cli/connection/ncat.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cli/connection/xfreerdp.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,17 +128,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "7de5a8a154f3ce82",
+  "active": "ba50aaa7af6f0e67",
   "lastOpenFiles": [
-    "cli/connection/telnet.md",
-    "cli/connection/Openssh.md",
-    "cli/connection/ngrok.md",
-    "cli/connection/nc.md",
+    "cli/connection/xfreerdp.md",
     "cli/connection/ncat.md",
-    "cli/connection/curl.md",
-    "cli/basic system info.md",
+    "tech/Openssh.md",
+    "cli/connection/ssh.md",
+    "cli/connection/telnet.md",
+    "cli/connection/ngrok.md",
+    "theory/zsh logic.md",
+    "theory/kernel.md",
     "theory/basic info.md",
-    "draft.md",
-    "general use commands.md"
+    "theory/bash scripting.md"
   ]
 }

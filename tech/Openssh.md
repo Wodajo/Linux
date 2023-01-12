@@ -73,7 +73,7 @@ public key has username of its owner:>
 a.k.a
 `ssh -L 8888:192.168.1.3:8080 kali@44.11.22.33`
 forward from localhost:8888 (because there is nothing before 8888 - localhost assumed) (client) -> 44.11.22.33 (server) -de-encapsulation-> forward -> 192.168.1.3:8080
-![local forward](./img/local_forward.png)
+![local forward](local_forward.png)
 ISP sees `ssh` traffic, just as 44.11.22.33. After de-encapsulation at 44.11.22.33 she'll see packets for 192.168.1.3:8080 and forward them there. 192.168.1.3 might respond, and response will be send back via `ssh`
 
 `ssh -L 8080:localhost:80 kali@192.168.1.109`
@@ -86,7 +86,7 @@ e.g.
 `ssh -R 8888:10.0.2.3:8080 kali@44.11.22.33`
 `-R` remote forward
 forward from 44.11.22.33:8888 (server) -> 10.0.2.2 (client) -de-encapsulation-> forward -> 10.0.2.3:8080 
-![remote_forwarding](./img/remote_forward.png)
+![remote_forwarding](remote_forward.png)
 10.0.2.3 might respond back
 
 `ssh -R 31337:localhost:22 kali@192.168.1.109`
