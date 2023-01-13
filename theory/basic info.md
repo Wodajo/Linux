@@ -58,7 +58,7 @@ You might care in cases of custom kernels developing
 		- XFS - high-performance fs
 	- networking
 		- DHCP for client
-		- manual config for simple servers (AD, DHCP, DNS needs manual config)
+		- manual config for servers (AD, DHCP, DNS needs manual config)
 	- Users
 		- root & administrators (wheel or sudo group)
 		- 
