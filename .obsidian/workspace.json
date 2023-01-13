@@ -20,36 +20,24 @@
             }
           },
           {
-            "id": "a2a1306540006e0b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/storage management/2. partitioning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cb6e119765cd2ccb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/storage management/3. file system.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3652566c1bd89adb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "theory/storage management/4. mounting partitions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f0e28d92a741776d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "theory/storage management/LVM.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -126,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/storage management/4. mounting partitions.md",
+                "file": "theory/storage management/LVM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,17 +141,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "3652566c1bd89adb",
+  "active": "f0e28d92a741776d",
   "lastOpenFiles": [
-    "theory/storage management/3. file system.md",
-    "theory/storage management/4. mounting partitions.md",
-    "theory/storage management/2. partitioning.md",
-    "theory/storage management/1. storage devices.md",
     "theory/basic info.md",
+    "theory/storage management/LVM.md",
+    "theory/storage management/4. mounting partitions.md",
+    "theory/storage management/3. file system.md",
+    "theory/storage management/1. storage devices.md",
+    "theory/storage management/2. partitioning.md",
+    "cli/basic b17(h/git.md",
     "draft.md",
     "theory/chroot.md",
-    "theory/net config/basic conf.md",
-    "theory/net config/NIC bonding.md",
-    "theory/boot process/4. init ramdisk and kernel.md"
+    "theory/net config/basic conf.md"
   ]
 }
