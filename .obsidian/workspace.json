@@ -20,48 +20,24 @@
             }
           },
           {
-            "id": "3652566c1bd89adb",
+            "id": "bebfd38e1cd852b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/storage management/4. mounting partitions.md",
+                "file": "theory/users&groups/local users.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f0e28d92a741776d",
+            "id": "568b812a6beb6b5f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/storage management/LVM.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1cb5b3e00766194f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/basic info.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ecda0234aeae16ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/software management/Untitled.md",
+                "file": "theory/users&groups/local groups.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -138,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/software management/Untitled.md",
+                "file": "theory/users&groups/local groups.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,17 +141,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "ecda0234aeae16ae",
+  "active": "568b812a6beb6b5f",
   "lastOpenFiles": [
+    "theory/net config/basic conf.md",
+    "theory/software management/deb files.md",
+    "theory/software management/rpm files.md",
+    "theory/software management/installing tarballs.md",
+    "theory/software management/2. yum and dnf repos.md",
+    "theory/software management/1. apt repos.md",
+    "theory/users&groups/local groups.md",
+    "theory/users&groups/local users.md",
     "theory/storage management/RAID.md",
-    "theory/software management/Untitled.md",
-    "theory/basic info.md",
-    "theory/kernel management.md",
-    "theory/storage management/4. mounting partitions.md",
-    "theory/storage management/1. storage devices.md",
-    "theory/storage management/3. file system.md",
-    "theory/storage management/2. partitioning.md",
-    "theory/chroot.md",
-    "theory/bash scripting.md"
+    "cli/basic b17(h/tar.md"
   ]
 }

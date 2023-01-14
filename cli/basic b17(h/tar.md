@@ -13,7 +13,7 @@
 `-t` list content of archive (`-z` for `.gz`)
 
 
-`tar -xf ARCHIVE` optionally `FILES` (files to be extracted)
+`tar -xvf ARCHIVE` optionally `FILES` (files to be extracted)
 `-x` extract. (Should autodetect compression type if necessary)
 
 
