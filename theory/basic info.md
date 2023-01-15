@@ -6,8 +6,8 @@
 
 `init` - first process started by the kernel
 	- create processes
-	- determines how the system should be set up in each `runlevel` aka `boot target`
-	- starts all background process after setting default `runlevel` for the system
+	- determines how the system should be set up in each `runlevel` (`sysV`) aka `boot target` (`systemd`)
+	- starts all background process after setting default `boot target` for the system
 	- automatically adopts all `orphaned processes`
 there was `system-v` than `upstart`. Now `systemd` is the `init`
 

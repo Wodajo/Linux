@@ -20,24 +20,48 @@
             }
           },
           {
-            "id": "bebfd38e1cd852b6",
+            "id": "438214245a0aa2ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/users&groups/local users.md",
+                "file": "theory/devices management/devices info.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "568b812a6beb6b5f",
+            "id": "474e4e1a6e27f751",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/users&groups/local groups.md",
+                "file": "theory/devices management/devices info.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7f09bc144dbcf143",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "theory/devices management/printing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "805dfabca65f4518",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "theory/devices management/udev.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -85,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "cups",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -114,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/users&groups/local groups.md",
+                "file": "theory/devices management/udev.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,17 +165,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "568b812a6beb6b5f",
+  "active": "805dfabca65f4518",
   "lastOpenFiles": [
-    "theory/net config/basic conf.md",
-    "theory/software management/deb files.md",
-    "theory/software management/rpm files.md",
-    "theory/software management/installing tarballs.md",
-    "theory/software management/2. yum and dnf repos.md",
-    "theory/software management/1. apt repos.md",
-    "theory/users&groups/local groups.md",
-    "theory/users&groups/local users.md",
-    "theory/storage management/RAID.md",
-    "cli/basic b17(h/tar.md"
+    "theory/devices management/devices info.md",
+    "theory/devices management/printing.md",
+    "theory/devices management/ps,top,fg,bg&kill.md",
+    "theory/devices management/special filesystems.md",
+    "theory/devices management/udev.md",
+    "theory/basic info.md",
+    "installation/arch installation.md",
+    "cli/system info.md",
+    "cli/basic b17(h/kill.md",
+    "README.md"
   ]
 }

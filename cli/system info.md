@@ -1,4 +1,6 @@
 `whoami` - username of current effective UID
+`w` - who is logged to system
+	`who` - same, but lesser info
 `id` - UID, GID, groups
 `ip a` - ip & MAC addresses assigned to all interfaces
 `uname -a` - kernel, hostname, system and architecture info
