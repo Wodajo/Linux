@@ -12,6 +12,7 @@ in worse case scenario - boot using usb stick to retrieve data
 	it will also load dependencies
 `/etc/modprobe.d/` - create a *.conf* file inside with a module to blacklist it (no loading **at boot**)
 
+`lsmod` - list loaded modules
 `insmod` - insert modules into running kernel
 	- full path to module to install
 	- no dependency check
@@ -21,5 +22,5 @@ in worse case scenario - boot using usb stick to retrieve data
 	- check dependencies in dependencies map -> we need to run `depmod` before to create a list of dependencies
 	- is a wrapper for `insmod`
 `rmmod` - remove modules from runnig kernel
-`lsmod` - list loaded modules
+
 

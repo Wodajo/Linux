@@ -29,4 +29,6 @@
 `.service` files are located in several folders across the system (weak)
 	BUT we can still query then with `systemctl status SERVICE`
 
+`systemctl list-units --type=service --state=running`
+
 the rest is `sudo systemctl start/stop/enable/disable SERVICE`

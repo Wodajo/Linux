@@ -20,48 +20,12 @@
             }
           },
           {
-            "id": "438214245a0aa2ee",
+            "id": "43766f4a519847fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/devices management/devices info.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "474e4e1a6e27f751",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/devices management/devices info.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7f09bc144dbcf143",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/devices management/printing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "805dfabca65f4518",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "theory/devices management/udev.md",
+                "file": "installation/arch installation.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -138,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/devices management/udev.md",
+                "file": "installation/arch installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,17 +129,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "805dfabca65f4518",
+  "active": "43766f4a519847fe",
   "lastOpenFiles": [
-    "theory/devices management/devices info.md",
-    "theory/devices management/printing.md",
-    "theory/devices management/ps,top,fg,bg&kill.md",
-    "theory/devices management/special filesystems.md",
-    "theory/devices management/udev.md",
-    "theory/basic info.md",
+    "cli/basic b17(h/text processing/sed.md",
     "installation/arch installation.md",
-    "cli/system info.md",
-    "cli/basic b17(h/kill.md",
-    "README.md"
+    "installation/basic programs.md",
+    "theory/boot process/systemd init.md",
+    "installation/rtl NIC setting up.md",
+    "theory/kernel management.md",
+    "theory/devices management/special filesystems.md",
+    "cli/basic b17(h/ln.md",
+    "installation/rtl kernel module installation.md",
+    "theory/devices management/udev.md"
   ]
 }

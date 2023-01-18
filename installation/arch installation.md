@@ -14,11 +14,12 @@ check if NIC is listed and enabled:
 `ip a`
 
 for WiFi:
-DHCP - `systemd-networkd` system daemon Network Manager. Should automatically provide **dynamic IP & DNS server** assignments for Ethernet, WLAN, WWAN. Contain cli interface - `networkctl`.  Systemd units - `systemd-networkd.service`, `systemd-resolved.service`
-(units can be i.a. services (_.service_), mount points (_.mount_), devices (_.device_) and sockets (_.socket_))
+Systemd units - `systemd-networkd.service`, `systemd-resolved.service`
+	(units can be i.a. services (_.service_), mount points (_.mount_), devices (_.device_) and sockets (_.socket_))
+	- `networkctl` as interface
+	- should provide **dynamic IP & DNS server** assignments for Ethernet, WLAN, WWAN
 
 Later you can install and enable `NetworkManager` (contains: daemon, cli interface `nmcli`). Systemd unit - `NetworkManager.service`
-
 
 `iwctl` to get into interactive `iwd` (net wireless daemon)
 	on my device it has some wierd problem with connecting to home router, but doesn't with smartphone hot-spot
@@ -36,23 +37,49 @@ Later you can install and enable `NetworkManager` (contains: daemon, cli interfa
 	UTC *Universal Tme Coordinated* - global time standard, independent of time zones (Poland in UTC + 1 in winter, +2 in summer)
 	RTC - *Real Time Cock* hardware clock working indepedntly of system state
 	NTP *Network Time Protocol* - time synchro over networktimedat
- 
-##### disks partiton
+
+
+### Partitioning
+##### disks partitioning using fdisk
 By live system disks are recognized as block devices (e.g. `/dev/sda`, `/dev/nvme0n1`)
 `fdisk -l`  to idntify these devices
 results ending with `rom`, `loop` and `airloot` may be ignored
 
-`fdisk /dev/dik_to_be_partitioned`
-You must create at least partition for root directory and EFI partition (for UEFI)
+`fdisk /dev/disk_to_be_partitioned`
+	`g`  new GPT partition table
+		UEFI use GPT aka GUID (globally unique identifiers) partition table
+	`n` new partition (we need at least one for root dir & EFI system partition)
+		- ESP (EFI system partition)
+		`1` partition number
+		`/n` default first sector
+		`+300M`
+		`t` to enter partition type
+		`1` "Efi System"
+		- Linux swap
+		`2`
+		`/n`
+		`+9G`
+		`t`
+		`19`
+		- Linux x86-64 root (/)
+		`3`
+		`/n`
+		`/n`
+		`t`
+		`23`
+	`p` print
+	`w` write
 
-UEFI use GPT aka GUID (globally unique identifiers) partition table
-min. 300M for EFI
-Root has a name Linux root (x86-64)
+###### disk partitioning using parted - not tested!
+`parted /dev/disk_to_part mkpart "EFI system partition" fat32 1MiB 301MiB`
+	this doesn't format partition (only "EFI.." label and "fat32" type)
+`parted /dev/disk_to_part set 1 esp on`
+	set the partition flag "esp" (EFI system partition) on the first partition of the specified disk
+`parted /dev/disk_to_part mkpart "swap partition" linux-swap 301MiB 9GiB`
+`parted /dev/disk_to_part mkpart "root partition" ext4 9GiB 100%`
 
 ##### format partitions with appropriate fs
-EFI partition must contain FAT32
-
-` lsblk -f` to check if sth is mounted. If it is -> UNmount e.g. `umount /dev/sda2`
+`lsblk -f` to check if sth is mounted. If it is -> UNmount e.g. `umount /dev/sda2`
 
 `mkfs.ext4 /dev/sda3` to create ext4 fs on sda3 partition
 `mkswap /dev/sda2` to initialize swap partition
@@ -60,13 +87,11 @@ EFI partition must contain FAT32
 
 
 ##### mount fs
-
 `mount /dev/sda3 /mnt` to mount root volume to `/mnt`
 If I get it correctly - current (live systems) `/mnt` will be future `/`
-
 `mount --mkdir /dev/sda1 /mnt/boot` to create `/mnt/boot` and mount EFI partition there
-
 `swapon /dev/sda2` to enable swap volume
+
 ##### installation
 mirrors servers in `/etc/pacman.d/mirrorlist`.
 
@@ -82,12 +107,10 @@ generate `fstab` file - define how disk partitions, other block devices or remot
 During boot OR system manager configuration reload -> `fstab` definitions converted into `systemd` mount units.
 
 ##### basic configuration
-
 Chroot (change root) into the new system:
 `arch-chroot /mnt`
 
 `pacman -S nano`
-
 Locales - used by locale-aware programs (i.a. time and date formats, alphabetic idiosyncrasies)
 `nano /etc/locale.gen` 
 locales are in form *language_territory.codeset*
@@ -99,7 +122,6 @@ Make [[#kayboard layout]] persistent:
 append `KEYMAP=pl`
 
 ##### basic network configuration
-
 `echo "Neocortex" >> /etc/hostname`  to create hostname
 
 `nss-myhostname` - (NSS is a module provided by `systemd`) provides local hostname resolution without eiditing `/etc/hosts`
@@ -135,7 +157,7 @@ add regular user to wheel group (better than sudoers grup, bcos polkit treats wh
 `usermod -aG wheel arco`
 
 
-##### boot loader
+##### bootloader
 `pacman -S grub efibootmgr`
 `GRUB` is the bootloader, `efibootmgr` is used by GRUB installation script to write entries to NVRAM (non-volatile RAM, it don't loose data if power is down)
 `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB`

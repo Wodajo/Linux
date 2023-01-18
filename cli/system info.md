@@ -7,12 +7,15 @@
 `hostnamectl` - kernel, hostname, architecture, OS info (looks nicer than uname imo)
 `ps aux` == `ps -ef` - print all processes on the system
 
-to find out you shell:
+to find out your shell:
 `ps -p $$`
 `-p` PID option, `$` returns the PID of current process (shell)
 
 `find / -perm /u=s,g=s -type f 2> /dev/null`
 `/u=s,g=s` any of these bits set -> find all files with `SUID` or `SGID`
+
+
+
 
 #### Files
 `/etc/hostname` - machine hostname
