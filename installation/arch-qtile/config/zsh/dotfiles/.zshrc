@@ -1,6 +1,5 @@
 # minimal version. Modified kali zshrc works just fine on arch:D
 
-```
 HISTFILE="$ZDOTDIR/.zhistory"
 HISTSIZE=1000
 SAVEHIST=1000
@@ -52,4 +51,3 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-```
