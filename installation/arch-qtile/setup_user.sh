@@ -37,7 +37,7 @@ fi
 
 # paru install (pvpn, obsidian)
 echo "[+] paru installing pvpn and obsidian"
-paru -S --skipreview --needed protonvpn-cli obsidian aur/betterlockscreen
+paru -S --skipreview --needed protonvpn-cli obsidian betterlockscreen python-conda
 
 # screen lock
 betterlockscreen -u /usr/share/wallpapers/wp11125106-endeavouros-wallpapers.jpg dim

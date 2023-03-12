@@ -14,6 +14,17 @@ bindkey "^[[3~" delete-char
 autoload -Uz compinit
 compinit
 
+# Show virtual environment name in prompt
+autoload -U add-zsh-hook
+add-zsh-hook chpwd() {
+	emulate -L zsh
+	if [[ -n "$VIRTUAL_ENV" ]]; then
+		PS1="%{$fb_bold[green]}%(${VIRTUAL_ENV:t})%{%reset_color%} $PS1"
+	else
+		PS1="$PS1"
+	fi
+}
+
 # Aliases
 #source $ZDOTDIR/.aliases
 
