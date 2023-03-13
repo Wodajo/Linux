@@ -25,8 +25,9 @@ add-zsh-hook chpwd() {
 	fi
 }
 
+
 # Aliases
-#source $ZDOTDIR/.aliases
+source $ZDOTDIR/.aliases
 
 # Command execution time
 #source $ZDOTDIR/command-execution-timer/command-execution-timer.zsh
@@ -55,6 +56,26 @@ PS1='%n@%m %F{22}%/%f %# '
 # ? if the exit status of last command was n, j if the number of jobs is at least n
 # %j nr. of current jobs
 RPROMPT='%(1j.%F{21}%j%f.) %(?..%F{red}%?%f)'
+
+# append execution timer at right prompt
+precmd () {
+    if [ -n "$timer" ]; then
+        TIMER=$((SECONDS - timer))
+        if [ "$TIMER" -ge 3600 ]; then
+            HOURS=$((TIMER / 3600))
+            MINUTES=$(( (TIMER % 3600) / 60 ))
+            SECONDS=$(( (TIMER % 3600) % 60 ))
+            RPROMPT+=' [Exec Time: '${HOURS}h' '${MINUTES}m' '${SECONDS}s']'
+        elif [ "$TIMER" -ge 60 ]; then
+            MINUTES=$((TIMER / 60))
+            SECONDS=$((TIMER % 60))
+            RPROMPT+=' [Exec Time: '${MINUTES}m' '${SECONDS}s']'
+        else
+            RPROMPT+=' [Exec Time: '${TIMER}s']'
+        fi
+        unset timer
+    fi
+}
 
 
 # Syntax autosuggestions

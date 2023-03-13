@@ -1,0 +1,2 @@
+alias l='ls -lah --color=auto'
+alias ll='ls -liAh --color=auto'
