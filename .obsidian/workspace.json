@@ -4,40 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "b5afbaa9b63db69a",
+        "id": "f6be5a5ab72cdfb4",
         "type": "tabs",
         "children": [
           {
-            "id": "c789b5915c8f81ea",
+            "id": "f11d891498391f23",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/basic info.md",
+                "file": "general use commands.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "43766f4a519847fe",
+            "id": "b07d79a4440a4ab6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installation/arch installation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "75c2682c10b963cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "installation/arch installation.md",
+                "file": "placeholder note.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/arch installation.md",
+                "file": "placeholder note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,10 +117,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "43766f4a519847fe",
+  "active": "b07d79a4440a4ab6",
   "lastOpenFiles": [
-    "cli/basic b17(h/text processing/sed.md",
+    "general use commands.md",
+    "placeholder note.md",
     "installation/arch installation.md",
+    "installation/Untitled.md",
+    "cli/basic b17(h/text processing/sed.md",
     "installation/basic programs.md",
     "theory/boot process/systemd init.md",
     "installation/rtl NIC setting up.md",
