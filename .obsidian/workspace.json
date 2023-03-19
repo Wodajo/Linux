@@ -25,14 +25,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "placeholder note.md",
+                "file": "placeholder/placeholder note.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "395394ccfbc6099d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "placeholder/placeholder note.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1c9c2547ebf09963",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "placeholder/MoP2.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -90,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "placeholder note.md",
+                "file": "placeholder/MoP2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,10 +141,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "b07d79a4440a4ab6",
+  "active": "1c9c2547ebf09963",
   "lastOpenFiles": [
+    "placeholder/nextflow.md",
+    "placeholder/placeholder note.md",
+    "placeholder/MoP2.md",
+    "placeholder",
     "general use commands.md",
-    "placeholder note.md",
     "installation/arch installation.md",
     "installation/Untitled.md",
     "cli/basic b17(h/text processing/sed.md",
