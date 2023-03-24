@@ -8,55 +8,42 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f11d891498391f23",
+            "id": "19a0e6a0ba8428af",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "general use commands.md",
+                "file": "theory/storage management/RAID.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b07d79a4440a4ab6",
+            "id": "4a28a26bb6a03767",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "placeholder/placeholder note.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
-            "id": "395394ccfbc6099d",
+            "id": "33afdbc820f1663a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "placeholder/placeholder note.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
-            "id": "1c9c2547ebf09963",
+            "id": "997deeea7023c032",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "placeholder/MoP2.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "placeholder/MoP2.md",
+                "file": "theory/storage management/RAID.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,8 +128,14 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "1c9c2547ebf09963",
+  "active": "19a0e6a0ba8428af",
   "lastOpenFiles": [
+    "psychoonko/Wybrane zaburzenia psychiczne 2016.md",
+    "psychoonko/1. speech sketch.md",
+    "psychoonko/notki.md",
+    "psychoonko/metaanaliza patients acute care 2010.md",
+    "README.md",
+    "psychoonko",
     "placeholder/nextflow.md",
     "placeholder/placeholder note.md",
     "placeholder/MoP2.md",
