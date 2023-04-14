@@ -13,37 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/storage management/RAID.md",
+                "file": "cli/basic b17(h/git.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4a28a26bb6a03767",
+            "id": "7516213896bec1de",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "33afdbc820f1663a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "997deeea7023c032",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "cli/basic b17(h/parallel.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -101,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/storage management/RAID.md",
+                "file": "cli/basic b17(h/parallel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,8 +117,20 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "19a0e6a0ba8428af",
+  "active": "7516213896bec1de",
   "lastOpenFiles": [
+    "theory/devices management/udev.md",
+    "theory/devices management/special filesystems.md",
+    "cli/system info.md",
+    "cli/basic b17(h/parallel.md",
+    "tech/containers.md",
+    "cli/basic b17(h/git.md",
+    "theory/storage management/4. mounting partitions.md",
+    "theory/storage management/LVM.md",
+    "theory/storage management/3. file system.md",
+    "theory/storage management/2. partitioning.md",
+    "theory/storage management/1. storage devices.md",
+    "theory/storage management/RAID.md",
     "psychoonko/Wybrane zaburzenia psychiczne 2016.md",
     "psychoonko/1. speech sketch.md",
     "psychoonko/notki.md",
@@ -145,12 +146,6 @@
     "installation/Untitled.md",
     "cli/basic b17(h/text processing/sed.md",
     "installation/basic programs.md",
-    "theory/boot process/systemd init.md",
-    "installation/rtl NIC setting up.md",
-    "theory/kernel management.md",
-    "theory/devices management/special filesystems.md",
-    "cli/basic b17(h/ln.md",
-    "installation/rtl kernel module installation.md",
-    "theory/devices management/udev.md"
+    "theory/boot process/systemd init.md"
   ]
 }
