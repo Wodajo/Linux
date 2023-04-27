@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cli/basic b17(h/parallel.md",
+                "file": "tech/Openssh.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8a25fa70690b9e7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "theory/storage management/4. mounting partitions.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -90,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cli/basic b17(h/parallel.md",
+                "file": "theory/storage management/4. mounting partitions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,17 +129,20 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "7516213896bec1de",
+  "active": "8a25fa70690b9e7f",
   "lastOpenFiles": [
-    "cli/basic b17(h/git.md",
+    "theory/storage management/3. file system.md",
+    "tech/freenas.md",
+    "tech/Openssh.md",
     "cli/basic b17(h/parallel.md",
+    "general use commands.md",
+    "cli/basic b17(h/git.md",
     "theory/devices management/udev.md",
     "theory/devices management/special filesystems.md",
     "cli/system info.md",
     "tech/containers.md",
     "theory/storage management/4. mounting partitions.md",
     "theory/storage management/LVM.md",
-    "theory/storage management/3. file system.md",
     "theory/storage management/2. partitioning.md",
     "theory/storage management/1. storage devices.md",
     "theory/storage management/RAID.md",
@@ -141,11 +156,8 @@
     "placeholder/placeholder note.md",
     "placeholder/MoP2.md",
     "placeholder",
-    "general use commands.md",
     "installation/arch installation.md",
     "installation/Untitled.md",
-    "cli/basic b17(h/text processing/sed.md",
-    "installation/basic programs.md",
-    "theory/boot process/systemd init.md"
+    "cli/basic b17(h/text processing/sed.md"
   ]
 }
