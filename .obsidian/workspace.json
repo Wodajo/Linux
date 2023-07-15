@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "19a0e6a0ba8428af",
+            "id": "ed26a55765b93984",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installation/awesome-xfce4/awesome.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "66c6406d58b16401",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "installation/arch-qtile/Qtile.md",
+                "file": "theory/software management/nix.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/awesome-xfce4/awesome.md",
+                "file": "theory/software management/nix.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,12 +113,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "19a0e6a0ba8428af",
+  "active": "ed26a55765b93984",
   "lastOpenFiles": [
-    "installation/i3-xfce4/i3.md",
-    "installation/awesome-xfce4/awesome.md",
-    "installation/awesome-xfce4",
+    "theory/software management/nix.md",
     "installation/arch-qtile/Qtile.md",
+    "installation/awesome-xfce4/awesome.md",
+    "installation/i3-xfce4/i3.md",
+    "installation/awesome-xfce4",
     "installation/xmonad-basic/xmonad.md",
     "installation/i3-xfce4",
     "cli/basic b17(h/git.md",
@@ -156,7 +145,6 @@
     "psychoonko/metaanaliza patients acute care 2010.md",
     "README.md",
     "psychoonko",
-    "placeholder/nextflow.md",
     "placeholder"
   ]
 }
