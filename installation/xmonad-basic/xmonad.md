@@ -16,3 +16,5 @@ create/move `xmonad.hs` to either:
 	`$XDG_CONFIG_HOMW/xmonad/`
 	`~/.xmonad/`
 	`$XMONAD_CONFIG_DIR/`
+
+NOT DONE - too time consuming for me now

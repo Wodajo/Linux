@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installation/xmonad-basic/xmonad.md",
+                "file": "installation/awesome-xfce4/awesome.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "66c6406d58b16401",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "installation/arch-qtile/Qtile.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/xmonad-basic/xmonad.md",
+                "file": "installation/awesome-xfce4/awesome.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,8 +127,13 @@
   },
   "active": "19a0e6a0ba8428af",
   "lastOpenFiles": [
-    "cli/basic b17(h/git.md",
+    "installation/i3-xfce4/i3.md",
+    "installation/awesome-xfce4/awesome.md",
+    "installation/awesome-xfce4",
+    "installation/arch-qtile/Qtile.md",
     "installation/xmonad-basic/xmonad.md",
+    "installation/i3-xfce4",
+    "cli/basic b17(h/git.md",
     "installation/xmonad-basic",
     "installation/Untitled.md",
     "tech/Openssh.md",
@@ -140,9 +157,6 @@
     "README.md",
     "psychoonko",
     "placeholder/nextflow.md",
-    "placeholder/placeholder note.md",
-    "placeholder/MoP2.md",
-    "placeholder",
-    "installation/arch installation.md"
+    "placeholder"
   ]
 }
