@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "installation/arch-qtile/Qtile.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ad9e727bf996e1cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "theory/software management/nix.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "4294a05feeee52a2",
@@ -113,10 +125,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "ed26a55765b93984",
+  "active": "f81ecc2d8e6e17df",
   "lastOpenFiles": [
-    "theory/software management/nix.md",
     "installation/arch-qtile/Qtile.md",
+    "theory/software management/nix.md",
     "installation/awesome-xfce4/awesome.md",
     "installation/i3-xfce4/i3.md",
     "installation/awesome-xfce4",

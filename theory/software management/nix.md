@@ -45,6 +45,9 @@ create 10 builder accounts - there can **never be more concurrent builds**
 `chgrp nix-users /nix/var/nix/daemon-socket`
 `chmod ug=rwx,o= /nix/var/nix/daemon-socket`
 
+`source /etc/profile.d/nix.sh`
+	add `/home/arco/.nix-profile/bin` & `/nix/var/nix/profiles/default/bin` to $PATH
+
 #### repo setup
 `nixpkgs` is a github repo with all packages&NixOS modules/expressions
 "`channel`" is a name of last "verified" git commits in `nixpkgs`
@@ -57,6 +60,8 @@ and/or
 
 `nix-channel --update`
 
+`nix-channel --remove nixpkgs` - if you want to "unsubscribe" to a channel 
+
 ### usage
 
 #### nix-env
@@ -67,8 +72,40 @@ manipulate/query nix user environment
 	build jobs default == 1! set it to `auto` to use nr. of CPUs
 		you can do it in `/etc/nix/nix.conf`
 			```max-jobs = auto```
-`nix-env -e firefox` uninstall
+`nix-env -q -a --attr-path`
+	available packages
+`nix-env -q -a --attr-path --status`
+	check if installed into user env and/or present in the system
+		I - installed in user env
+		P - present on system
+		S - substitute (nix can fetch pre-build package form somewhere)
+`nix-env -q -a --attr-path firefox*`
+	all available firefox* packages
+`nix-env --upgrade --attr firefox`
+`nix-env --upgrade` - upgrade all
+`nix-env --upgrade --dry-run` - list what would be upgraded to what
+`nix-env --uninstall firefox` uninstall
 `nix-env -q` query
+
+##### free disk space
+`nix-env --list-generations`
+	list generations of current profile
+	(profiles keep track of which software was installed with given user)
+
+`nix-env --switch-profile /nix/var/nix/profiles/my_profile`
+
+`nix-env --delete-generations old`
+	delete all non-current generations of user current profile
+`nix-env --delete-generations 10 11 14`
+	delete 10, 11, 14
+`nix-env --delete-generations 14d`
+	delete older than 14 days
+	
+`nix-store --gc`
+	run garbage collector for given user
+	
+`nix-collect-garbage -d`
+	deletes all old generations of all profiles in `/nix/var/nix/profiles`
 
 #### shell environments
 you can immediately use any program packaged with `nix` without installing permanently -> it will work the same on Linux, WSL & MacOS
@@ -88,12 +125,12 @@ you can add packages to working `nix-shell` with another `nix-shell -p package_n
 		not really needed most of the time:)
 	`-I` determines what to use as a source of package declarations
 
-##### free disk space
-`nix-collect-garbage`
-
+### upgrade
+`nix-channel --update; nix-env --install --attr nixpkgs.nix nixpkgs.cacert; systemctl daemon-reload; systemctl restart nix-daemon`
 
 ### NixOS docker image
 `docker run -ti nixos/nix`
 
 
 [for OpenGl/Vulcan applications](https://github.com/guibou/nixGL)
+[nix doc for sharing nix store via http/ssh/amazon s3](https://nixos.org/manual/nix/stable/package-management/binary-cache-substituter.html)
