@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installation/arch installation.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "4294a05feeee52a2",
@@ -111,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/arch installation.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,10 +137,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "f81ecc2d8e6e17df",
+  "active": "6cd62cbc0f32e414",
   "lastOpenFiles": [
-    "theory/Nixos/notes.md",
+    "theory/kernel management.md",
+    "theory/chroot.md",
+    "README.md",
     "installation/arch-qtile/Qtile.md",
+    "theory/Nixos/notes.md",
     "theory/Nixos/nix basics.md",
     "theory/Nixos",
     "installation/awesome-xfce4/awesome.md",
@@ -167,9 +169,6 @@
     "theory/storage management/1. storage devices.md",
     "theory/storage management/RAID.md",
     "psychoonko/Wybrane zaburzenia psychiczne 2016.md",
-    "psychoonko/1. speech sketch.md",
-    "psychoonko/notki.md",
-    "psychoonko/metaanaliza patients acute care 2010.md",
     "psychoonko",
     "placeholder"
   ]

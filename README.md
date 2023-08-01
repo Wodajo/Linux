@@ -2,8 +2,9 @@
 Projects aiming for better linux-kernel OSs understandment and/or linux related fun.  
 
 Plans:  
--> Now I'm preparing for **writing installation script**
+-> setting up nixos (as ultimate solution for changing deps & easy system migration)
 
+~~-> Now I'm preparing for **writing installation script**~~
 -> ~~Arch installation -> audio and network managers ~~- done
 ~~-> qtile Windows Manager (for fast and extravagant work environment)~~ - done  
 ~~-> kernel switching and modules (seems like a pretty damn important thing)~~ - kinda done   
