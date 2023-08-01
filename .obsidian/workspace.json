@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/Nixos/notes.md",
+                "file": "installation/arch installation.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "4294a05feeee52a2",
@@ -110,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/Nixos/notes.md",
+                "file": "installation/arch installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,11 +138,11 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "6cd62cbc0f32e414",
+  "active": "f81ecc2d8e6e17df",
   "lastOpenFiles": [
+    "theory/Nixos/notes.md",
     "installation/arch-qtile/Qtile.md",
     "theory/Nixos/nix basics.md",
-    "theory/Nixos/notes.md",
     "theory/Nixos",
     "installation/awesome-xfce4/awesome.md",
     "installation/i3-xfce4/i3.md",
