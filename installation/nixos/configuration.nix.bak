@@ -18,7 +18,7 @@
   # ntfs support
   boot.supportedFilesystems = [ "ntfs" ];
 
-  networking.hostName = "Thinkpad"; # Define your hostname.
+  networking.hostName = "Neocortex"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -32,7 +32,7 @@
   time.timeZone = "Europe/Warsaw";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "pl_PL.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pl_PL.UTF-8";
@@ -85,8 +85,7 @@
 
   # Enable GNOME
 #  services.xserver.displayManager.gdm.enable = true;
-#  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
   services.xserver.windowManager.qtile.enable = true;
   services.xserver.displayManager.defaultSession = "none+qtile";
 #  services.xserver.displayManager.defaultSession = "gnome";
@@ -130,10 +129,10 @@ gutenprint gutenprintBin hplip brlaser
 
 
   # Enable blueman
-  services.blueman.enable = false;
+  services.blueman.enable = true;
   
   # Rstudio Server
-#  services.rstudio-server.enable = true;
+  services.rstudio-server.enable = true;
 #  services.rstudio-server.serverWorkingDir = "path/to/dir"  # path ro default working dir of rserver
 #  services.rstudio-server.rsessionExtraConfig = ""  # extra content for rsession.conf
 
@@ -157,24 +156,29 @@ gutenprint gutenprintBin hplip brlaser
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+
   # Cachix - I'm not really sure which binaries are from there (surely not these from steam...)
 #{
 #  nix.settings = {
 #    substituters = ["https://nix-gaming.cachix.org"];
 #    trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
-#  }
+#  };
 #}
 
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.thinkpad = {
+  users.users.arco = {
     isNormalUser = true;
-    description = "Thinkpad";
+    description = "Wodajo";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
 #      firefox
+#      obsidian
+#      nomacs
 #      vlc
+#      obs-studio
+#      feh
     ];
   };
 
@@ -183,26 +187,26 @@ gutenprint gutenprintBin hplip brlaser
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-#  environment.systemPackages = with pkgs;
-#  let
-#    RStudio-with-my-packages = rstudioWrapper.override{
-#      packages = with rPackages; [ 
-#tidyverse rtracklayer DESeq2 limma ggrepel scales seqinr shiny rlang stringr circlize 
-#];};
-#    RStudio-Server-with-my-pks = rstudioServerWrapper.override{
-#	packages = with rPackages; [
-#tidyverse rtracklayer DESeq2 limma ggrepel scales seqinr rlang stringr circlize shiny	
-#];};
-#  in
-#  [
-#    RStudio-with-my-packages
+  environment.systemPackages = with pkgs;
+  let
+    RStudio-with-my-packages = rstudioWrapper.override{
+      packages = with rPackages; [ 
+tidyverse rtracklayer DESeq2 limma ggrepel scales seqinr shiny rlang stringr circlize 
+];};
+    RStudio-Server-with-my-pks = rstudioServerWrapper.override{
+	packages = with rPackages; [
+tidyverse rtracklayer DESeq2 limma ggrepel scales seqinr rlang stringr circlize shiny	
+];};
+  in
+  [
+    RStudio-with-my-packages
 #     RStudio-Server-with-my-pks
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     firefox
     obsidian
     conda
-#    jetbrains.pycharm-community
+    jetbrains.pycharm-community
 #     gnomeExtensions.no-activities-button
 #     gnomeExtensions.dash-to-dock
 #     gnomeExtensions.vitals
@@ -235,7 +239,7 @@ gutenprint gutenprintBin hplip brlaser
     blueman
     lightdm-gtk-greeter
     lxappearance
-#    anydesk
+    anydesk
 #    mangohud
 #    httrack
 #    burpsuite
@@ -248,17 +252,18 @@ gutenprint gutenprintBin hplip brlaser
 #          winetricks  # all versions
 #	];
 #    })
-#    heroic
-#    nfs-utils  # think about NFS from katbot NAS
+    heroic
+    nfs-utils  # think about NFS from katbot NAS
     qbittorrent
+    nmap
     bleachbit
-#    qmmp
+    qmmp
 #    scanmem  # cheat engine like stuff 
     chromium
 #   appimagekit
     appimage-run
     foomatic-db-ppds-withNonfreeDb
-#    anki  # anki-bin slightly newer
+    anki  # anki-bin slightly newer
    virt-manager
 #   spice-gtk  # for us redirection in virt manager via SPICE - it also needs a security wrapper (should be in #Virtualization)
     usbutils
@@ -272,20 +277,9 @@ gutenprint gutenprintBin hplip brlaser
 #	dedicatedServer.openFirewall = true;   # open ports in fw for Source Dedicated Server
 #	};
 #
-#	hardware.opengl.driSupport32Bit = true;  # for Epic Games Store 32bit support (needed on 64)
+	hardware.opengl.driSupport32Bit = true;  # for Epic Games Store 32bit support (needed on 64)
 
   # fonts
-fonts.fonts = with pkgs; [
-  noto-fonts
-  noto-fonts-cjk
-  noto-fonts-emoji
-  liberation_ttf
-  fira-code
-  fira-code-symbols
-  mplus-outline-fonts.githubRelease
-  dina-font
-  proggyfonts
-];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
