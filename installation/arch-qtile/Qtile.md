@@ -16,4 +16,4 @@ picom -f &
 ```
 `setxkbmap pl` keymap, `nitrogen --restore` restore previous wallpaper after reboot, `picom -f &` start compositor with fading effect in the backgroud
 
-BUT it won't work when going out of sleep mode (vpn wth ks won't re-connect) -> use `~/.config/qtile/autostart.sh` (start it with hook from `~/.config/qtile/config.py`)
+BUT it won't work when going out of sleep mode (vpn wth ks won't re-connect) -> use `~/.config/qtile/autostart.sh` (start it with hook from `~/.config/qtile/config.py`, REMEMBER TO MAKE EXECUTABLE)
