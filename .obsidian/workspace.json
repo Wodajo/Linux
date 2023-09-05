@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installation/kvm_qemu_libvirt_virt-manager stack.md",
+                "file": "tech/termux.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installation/kvm_qemu_libvirt_virt-manager stack.md",
+                "file": "tech/termux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,8 +112,11 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "f81ecc2d8e6e17df",
+  "active": "ed26a55765b93984",
   "lastOpenFiles": [
+    "general use commands.md",
+    "tech/termux.md",
+    "installation/kvm_qemu_libvirt_virt-manager stack.md",
     "installation/arch-qtile/Qtile.md",
     "theory/Nixos/nix basics.md",
     "installation/arch installation.md",
@@ -135,15 +138,12 @@
     "theory/storage management/3. file system.md",
     "tech/freenas.md",
     "cli/basic b17(h/parallel.md",
-    "general use commands.md",
     "theory/devices management/udev.md",
     "theory/devices management/special filesystems.md",
     "cli/system info.md",
     "tech/containers.md",
     "theory/storage management/LVM.md",
     "theory/storage management/2. partitioning.md",
-    "theory/storage management/1. storage devices.md",
-    "theory/storage management/RAID.md",
     "psychoonko",
     "placeholder"
   ]
