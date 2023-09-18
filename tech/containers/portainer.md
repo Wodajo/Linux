@@ -17,9 +17,10 @@ install Docker Engine (preferably in NixOS, or [arch/debian](./docker))
 
 `docker volume create portainer_data` for portainers db
 `docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest` download&install Portainer Server
-	`-d` detatched (background), `-p` map local port to container port
+	`-d` detatched (background), `-p` map local port to container port (discarded bcos use host network.)
 	`-v` mount host dir:container dir
 	Portainer generates and uses a self-signed SSL certificate to secure port `9443`
+	`--network host` so as not to have networking probles when connecting agents (bridged docker network stuff)
 `docker ps` container is there ^^
 `https://localhost:9443` - check out the UI
 
