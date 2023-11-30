@@ -13,8 +13,9 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout = 1;
 
-  # NTFS support
+  # ntfs support
   boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "Neocortex"; # Define your hostname.
@@ -48,30 +49,30 @@
   # NVIDIA stuff
 
 # Make sure opengl is enabled
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
+#  hardware.opengl = {
+#    enable = true;
+#    driSupport = true;
+#    driSupport32Bit = true;
+#  };
 
   # Tell Xorg to use the nvidia driver (also valid for Wayland)
-  services.xserver.videoDrivers = ["nvidia"];
+#  services.xserver.videoDrivers = ["nvidia"];
 
-  hardware.nvidia = {
+#  hardware.nvidia = {
 
     # Modesetting is needed for most Wayland compositors
-    modesetting.enable = true;
+#    modesetting.enable = true;
 
     # Use the open source version of the kernel module
     # Only available on driver 515.43.04+
-    open = false;
+#    open = false;
 
     # Enable the nvidia settings menu
-    nvidiaSettings = true;
+#    nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
+#    package = config.boot.kernelPackages.nvidiaPackages.stable;
+#  };
 
 
   # Enable the X11 windowing system.
@@ -79,17 +80,39 @@
 
   # Enable the XFCE Desktop Environment.
 #  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.lightdm.greeters.slick.enable = true;
 #  services.xserver.desktopManager.xfce.enable = true;
 
   # Enable GNOME
-  services.xserver.displayManager.gdm.enable = true;
+#  services.xserver.displayManager.gdm.enable = true;
+#  services.xserver.desktopManager.plasma5.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 #  services.xserver.windowManager.qtile.enable = true;
 #  services.xserver.displayManager.defaultSession = "none+qtile";
-  services.xserver.displayManager.defaultSession = "gnome";
+#  services.xserver.displayManager.defaultSession = "plasma";
+   services.xserver.displayManager.defaultSession = "gnome";
 
   # GNOME services
-  services.gnome.gnome-browser-connector.enable = true;  # host-side connector for browser shell extensions (you have to also install browser addon
+#  services.gnome.gnome-browser-connector.enable = true;  # host-side connector for browser shell extensions (you have to also install browser addon
+#  services.gnome.gnome-keyring.enable = true;
+
+  # Virtualization
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "arco" ];
+ #  virtualisation.virtualbox.host.enable = true;
+ #  virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.virtualbox.guest.enable = true;
+  virtualisation.virtualbox.guest.x11 = true;
+  virtualisation.libvirtd.enable = true;
+  virtualisation.docker.enable = true;
+  programs.dconf.enable = true;  # ?
+#   [virt-manager] File (menu bar) -> add connection    OR   in home-manager
+#   HyperVisor = QEMU/KVM
+#   Autoconnect = checkmark
+#   Connect
+#  security.wrappers.spice-client-glib-usb-acl-helper.source = "${pkgs.spice-gtk}/bin/spice-client-glib-usb-acl-helper";
+  virtualisation.spiceUSBRedirection.enable = true;
+  services.spice-vdagentd.enable = true;  # for copy-paste between host&VM
 
   # Configure keymap in X11
   services.xserver = {
@@ -100,14 +123,25 @@
   # Configure console keymap
   console.keyMap = "pl2";
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  # Printing
+#  services.printing.enable = true;  # CUPS
+
+  # -- IPP
+#  services.avahi.enable = true;
+#  services.avahi.nssmdns = true;
+  # for a WiFi printer
+#  services.avahi.openFirewall = true;
+  # -- driver-based printing
+#  services.printing.drivers = with pkgs;[
+#gutenprint gutenprintBin hplip brlaser
+#];
+
 
   # Enable blueman
   services.blueman.enable = true;
   
   # Rstudio Server
-  services.rstudio-server.enable = true;
+#  services.rstudio-server.enable = true;
 #  services.rstudio-server.serverWorkingDir = "path/to/dir"  # path ro default working dir of rserver
 #  services.rstudio-server.rsessionExtraConfig = ""  # extra content for rsession.conf
 
@@ -146,7 +180,7 @@
   users.users.arco = {
     isNormalUser = true;
     description = "Wodajo";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" "docker" ];
     packages = with pkgs; [
 #      firefox
 #      obsidian
@@ -160,35 +194,90 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+
+nixpkgs.overlays = [ (final: prev: { 
+  zotero_beta = prev.zotero.overrideAttrs (old: with prev.zotero; rec {
+    pname = "zotero-beta";
+    version = "0cab24fb8";
+
+    libPath = prev.zotero.libPath + ":" + prev.lib.makeLibraryPath [
+      prev.alsa-lib
+      prev.xorg.libXtst
+    ];
+    src = pkgs.fetchurl {
+      url = "https://download.zotero.org/client/beta/7.0.0-beta.48%2B${version}/Zotero-7.0.0-beta.48%2B${version}_linux-x86_64.tar.bz2";
+      hash = "sha256-IbTCQr32dknmy8aqQe4u6ymlQ+2VNSqHcFZDbV26Wbo=";
+    };
+    meta.knownVulnerabilities = [ ];
+    postPatch = "";
+
+    installPhase = ''
+      runHook preInstall
+
+      mkdir -p "$prefix/usr/lib/zotero-bin-${version}"
+      cp -r * "$prefix/usr/lib/zotero-bin-${version}"
+      mkdir -p "$out/bin"
+      ln -s "$prefix/usr/lib/zotero-bin-${version}/zotero" "$out/bin/"
+
+      # install desktop file and icons.
+      mkdir -p $out/share/applications
+      cp ${desktopItem}/share/applications/* $out/share/applications/
+      for size in 16 32 48 256; do
+        install -Dm444 chrome/icons/default/default$size.png \
+          $out/share/icons/hicolor/''${size}x''${size}/apps/zotero.png
+      done
+
+      for executable in \
+        zotero-bin plugin-container \
+        updater minidump-analyzer
+      do
+        if [ -e "$out/usr/lib/zotero-bin-${version}/$executable" ]; then
+          patchelf --interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" \
+            "$out/usr/lib/zotero-bin-${version}/$executable"
+        fi
+      done
+      find . -executable -type f -exec \
+        patchelf --set-rpath "$libPath" \
+          "$out/usr/lib/zotero-bin-${version}/{}" \;
+
+      runHook postInstall
+    '';
+  });
+  })
+];
+
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs;
   let
     RStudio-with-my-packages = rstudioWrapper.override{
-      packages = with rPackages; [ tidyverse rtracklayer DESeq2 limma ggrepel scales seqinr shiny rlang stringr circlize ]; };
+      packages = with rPackages; [ 
+tidyverse rtracklayer DESeq2 limma ggrepel scales seqinr shiny rlang stringr circlize renv
+];};
     RStudio-Server-with-my-pks = rstudioServerWrapper.override{
 	packages = with rPackages; [
-tidyverse rtracklayer DESeq2 limma ggrepel scales seqinr rlang stringr circlize shiny	
+tidyverse rtracklayer DESeq2 limma ggrepel scales seqinr rlang stringr circlize shiny renv
 ];};
   in
   [
 #    RStudio-with-my-packages
-     RStudio-Server-with-my-pks
+#     RStudio-Server-with-my-pks
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     firefox
-    obsidian
-    conda
+#    obsidian
+#    conda
     jetbrains.pycharm-community
-     gnomeExtensions.no-activities-button
-     gnomeExtensions.dash-to-dock
-     gnomeExtensions.vitals
-     gnomeExtensions.nvidia-gpu-stats-tool
+#     gnomeExtensions.no-activities-button
+#     gnomeExtensions.dash-to-dock
+#     gnomeExtensions.vitals
+#     gnomeExtensions.nvidia-gpu-stats-tool
     nomacs
     vlc
     obs-studio
-    feh
-    qtile
+#    feh
+#    qtile
     picom
     nitrogen
     flameshot
@@ -207,34 +296,66 @@ tidyverse rtracklayer DESeq2 limma ggrepel scales seqinr rlang stringr circlize 
     nmap
     libreoffice-still
     hunspell
-    hunspellDicts.pl_PL
+    hunspellDicts.pl-pl
     networkmanagerapplet
     blueman
     lightdm-gtk-greeter
     lxappearance
-    anydesk
-    mangohud
-#    lutris
-#    (lutris.override {
-#	extraPkgs = pkgs: [
-#	  # list of dependencies here
-#          wineWowPackages.stable  # both 32&64 bit apps
-#          winetricks  # all versions
-#	];
-#    })
-#    heroic
-    nfs-utils  # think about NFS from katbot NAS
-#    qbittorrent
+#    anydesk
+#    mangohud
+#    httrack
+#    burpsuite
+    usbimager
+    lutris
+    (lutris.override {
+	extraPkgs = pkgs: [
+	  # list of dependencies here
+          wineWowPackages.stable  # both 32&64 bit apps
+          winetricks  # all versions
+	];
+    })
+    heroic
+#    nfs-utils  # think about NFS from katbot NAS
+    qbittorrent
+    bleachbit
+#    qmmp
+    scanmem  # cheat engine like stuff 
+    chromium
+#   appimagekit
+    appimage-run
+#    foomatic-db-ppds-withNonfreeDb
+    anki  # anki-bin slightly newer
+   virt-manager
+   spice-gtk  # for us redirection in virt manager via SPICE - it also needs a security wrapper (should be in #Virtualization)
+    usbutils
+    pciutils
+    libarchive
+    android-udev-rules  # so that non-root device (specifically androids) could use usb
+    onlyoffice-bin
+    wineWowPackages.stable
+    winetricks
+    vassal
+    teamviewer
+    zotero
+    python3
+    diffutils
+ #   virtualbox
+ #   linuxKernel.packages.linux_xanmod_latest.virtualbox
+    calibre
   ];
+
+  # Android SKD (adb, fastboot ...)
+#  programs.adb.enable = true;  # you also need user to be in "adbusers" group for proper udev rules  # 34.0.1 (old)
 
 
 #  Gaming
-#	programs.steam = {
-#	enable = true;  # open ports in fw for Steam Remote Play
+	programs.steam = {
+	enable = true;
+#       remotePlay.openFirewall = true;  # Open ports in the fw for Steam Remote Play
 #	dedicatedServer.openFirewall = true;   # open ports in fw for Source Dedicated Server
-#	};
+	};
 #
-#	hardware.opengl.driSupport32Bit = true;  # for Epic Games Store 32bit support (needed on 64)
+	hardware.opengl.driSupport32Bit = true;  # for Epic Games Store 32bit support (needed on 64)
 
   # fonts
 
